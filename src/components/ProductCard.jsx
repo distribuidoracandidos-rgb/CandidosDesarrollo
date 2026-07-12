@@ -1,4 +1,9 @@
+
+import { useCart } from "../context/CartContext";
 function ProductCard({ producto }) {
+
+  const { addToCart } = useCart();
+
   return (
     <div className="producto-card">
       <div className="producto-imagen">
@@ -17,7 +22,16 @@ function ProductCard({ producto }) {
         <span>Caja: ${Number(producto.precioCaja).toLocaleString("es-AR")}</span>
       </div>
 
-      <button>Agregar al pedido</button>
+      <button
+  onClick={() => {
+    console.log("CLICK");
+    console.log(producto);
+    addToCart(producto);
+  }}
+>
+  Agregar al pedido
+</button>
+
     </div>
   );
 }

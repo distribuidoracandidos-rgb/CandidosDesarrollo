@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Banner from "./Banner";
+import Navbar from "./Navbar";
 
 function Layout({ children }) {
   return (
@@ -7,6 +8,7 @@ function Layout({ children }) {
       <Header />
       <Banner />
       {children}
+      <Navbar />
     </div>
   );
 }

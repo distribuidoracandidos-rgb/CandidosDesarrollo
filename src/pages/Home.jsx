@@ -29,9 +29,11 @@ useEffect(() => {
 
     <SearchBar />
 
-    <h2>Categorías</h2>
+<h2>Categorías</h2>
 
-   {[...new Set(productosApi.map((p) => p.CATEGORIA))].map((categoria) => (
+<div className="categorias-grid">
+
+{[...new Set(productosApi.map((p) => p.CATEGORIA))].map((categoria) => (
   <CategoryCard
     key={categoria}
     nombre={categoria}
@@ -39,6 +41,7 @@ useEffect(() => {
   />
 ))}
 
+</div>
 
 <h2>Productos destacados</h2>
 
@@ -60,4 +63,5 @@ useEffect(() => {
 }
 
 export default Home;
+
 

@@ -243,3 +243,28 @@ background:#b88b00;
     color:#222;
     font-weight:bold;
 }
+.categorias-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+    gap:15px;
+    margin-bottom:30px;
+}
+.categoria{
+    background:white;
+    border-radius:16px;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    color:#222;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.categoria:hover{
+    transform:translateY(-4px);
+}
+
+.icono{
+    font-size:38px;
+    margin-bottom:10px;
+}
