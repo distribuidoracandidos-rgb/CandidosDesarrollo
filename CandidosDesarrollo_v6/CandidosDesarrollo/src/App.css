@@ -43,4 +43,8 @@
   font-weight: bold;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
   z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
 }

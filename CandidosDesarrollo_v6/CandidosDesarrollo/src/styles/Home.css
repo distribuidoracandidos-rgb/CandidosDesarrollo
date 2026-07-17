@@ -66,6 +66,10 @@
 
 .categoria .icono {
   font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amarillo-oscuro, #d4a100);
 }
 
 .categoria strong {

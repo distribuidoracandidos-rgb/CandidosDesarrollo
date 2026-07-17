@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Navbar from "./Navbar";
+import { FaCartShopping } from "react-icons/fa6";
 import { useCart } from "../context/CartContext";
 
 function Layout({ children }) {
@@ -15,7 +16,7 @@ function Layout({ children }) {
       )}
 
       <div className="carrito-flotante">
-        🛒 {cart.reduce((acc, p) => acc + p.cantidad, 0)}
+        <FaCartShopping /> {cart.reduce((acc, p) => acc + p.cantidad, 0)}
       </div>
 
       <Header />

@@ -78,6 +78,12 @@ p.tipo === producto.tipo
 
   }
 
+  function removeFromCart(id, tipo) {
+    setCart((prev) =>
+      prev.filter((p) => !(p.ID === id && p.tipo === tipo))
+    );
+  }
+
 const total = cart.reduce((acc, p) => {
   return acc + (Number(p.precio) * Number(p.cantidad));
 }, 0);
@@ -91,6 +97,7 @@ console.log(total);
         addToCart,
         increase,
         decrease,
+        removeFromCart,
         total,
         mensaje,
       }}

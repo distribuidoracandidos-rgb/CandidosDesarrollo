@@ -9,6 +9,21 @@
   flex-wrap: wrap;
 }
 
+.header-marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.header-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .header-marca h1 {
   color: white;
   font-size: 1.9rem;
@@ -31,6 +46,10 @@
   border-radius: 30px;
   white-space: nowrap;
   transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
 }
 
 .header-contacto:hover {
@@ -40,6 +59,11 @@
 
 @media (max-width: 600px) {
   .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-marca {
     flex-direction: column;
     text-align: center;
   }

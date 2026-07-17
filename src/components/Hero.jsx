@@ -3,6 +3,9 @@ import "../styles/Hero.css";
 function Hero() {
   return (
     <section className="hero">
+      <div className="hero-luces" />
+      <div className="hero-textura" />
+
       <div className="hero-texto">
         <h1>Candido's</h1>
 

@@ -101,3 +101,26 @@
   background: var(--verde, #16a34a);
   color: white;
 }
+
+.boton-contactar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1 1 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: var(--verde, #16a34a);
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.boton-contactar:hover {
+  background: #128a3e;
+  transform: translateY(-2px);
+}

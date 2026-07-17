@@ -1,6 +1,8 @@
 import "../styles/Home.css";
 import CategoryCard from "../components/CategoryCard";
 import ProductCard from "../components/ProductCard";
+import ServiceCard from "../components/ServiceCard";
+import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import { useProducts } from "../context/ProductsContext";
@@ -23,6 +25,8 @@ function Home() {
     <Layout>
 
       <Hero />
+
+      <ServiceCard />
 
       <h2 id="categorias" className="titulo-seccion">Categorías</h2>
 
@@ -48,6 +52,8 @@ function Home() {
             />
           ))}
       </div>
+
+      <Footer />
 
     </Layout>
   );
