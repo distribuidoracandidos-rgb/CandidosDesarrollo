@@ -14,8 +14,13 @@ function Terms() {
         </p>
         <p>
           <em>
-            (Texto de referencia — te recomiendo reemplazarlo por términos
-            redactados o revisados por un profesional legal.)
+            (Los pedidos realizados a través de este sitio web constituyen una solicitud de compra y estarán sujetos a su posterior verificación y confirmación por parte de Candido's, la cual se realizará mediante los canales oficiales de comunicación, principalmente WhatsApp.
+
+La disponibilidad de productos, precios, promociones y condiciones comerciales podrá variar sin previo aviso, de acuerdo con la existencia de stock, modificaciones de proveedores o políticas comerciales de la empresa. La confirmación definitiva del pedido se realizará únicamente una vez validada la información correspondiente.
+
+Los beneficios de entrega gratuita son aplicables exclusivamente dentro de Paraná y zonas aledañas, en los días y horarios establecidos por la empresa. Para otras localidades podrán aplicarse costos, plazos y condiciones de entrega diferentes.
+
+El uso de este sitio implica la aceptación de los presentes Términos y Condiciones, así como de la Política de Privacidad vigente.)
           </em>
         </p>
       </div>
