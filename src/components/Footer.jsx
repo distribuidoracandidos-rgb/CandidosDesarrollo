@@ -65,8 +65,8 @@ function Footer() {
           <a href="https://wa.me/5493434162242">
             <FaWhatsapp /> +54 9 343 416-2242
           </a>
-          <a href="mailto:contacto@candidosdistribuidora.com.ar">
-            <FaEnvelope /> contacto@candidosdistribuidora.com.ar
+          <a href="mailto:distribuidoracandidos@gmail.com">
+            <FaEnvelope /> distribuidoracandidos@gmail.com
           </a>
           <span className="footer-ubicacion">
             <FaLocationDot /> Paraná, Entre Ríos, Argentina

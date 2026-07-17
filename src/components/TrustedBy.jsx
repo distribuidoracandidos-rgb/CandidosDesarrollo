@@ -2,12 +2,18 @@ import "../styles/TrustedBy.css";
 
 // Placeholder: reemplazar por los nombres reales de tus comercios/clientes.
 const CLIENTES = [
-  "Kiosco El 20",
-  "Autoservicio Don José",
-  "Maxi Kiosco",
-  "Almacén San Martín",
-  "Kiosco La Esquina",
-  "Distribuidora Del Centro",
+  "Drugstore Terminal",
+  "Deu Srl",
+  "Maxikiosco la Esquina",
+  "Drugstore Guemes",
+  "Verduleria Laprida",
+  "Madafaka",
+  "Wilson Proveeduria",
+  "Drugstore 365",
+  "Bar Schonfeldt",
+  "Maxicels",
+  "Despensa Violeta",
+  "Maxikiosco el Gringo",
 ];
 
 function TrustedBy() {

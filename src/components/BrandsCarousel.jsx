@@ -1,14 +1,21 @@
 import "../styles/BrandsCarousel.css";
 
 const MARCAS = [
-  "Master",
-  "Mill",
-  "Pueblo",
+  "Golden",
+  "Sarandi",
+  "Brownway",
   "Espert",
   "Fuegolandia",
   "Stanley",
   "Panini",
-  "Dolchester",
+  "Candela",
+  "OCB",
+  "Wolfram",
+  "ReVirtual",
+  "Golozen",
+  "Guaymallen",
+  "Sube Nacion",
+  "Fernet-Branca",
 ];
 
 function BrandsCarousel() {

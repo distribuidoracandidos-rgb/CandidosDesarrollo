@@ -10,7 +10,7 @@ const BENEFICIOS = [
   {
     icono: <FaCreditCard />,
     titulo: "Todos los medios de pago",
-    texto: "Transferencia, efectivo, MP",
+    texto: "Transferencia, efectivo",
   },
   {
     icono: <FaBox />,
