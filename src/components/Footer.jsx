@@ -22,8 +22,8 @@ function Footer() {
             <FaInstagram /> @candidos.s
           </a>
 
-          <a href="mailto:ivocandido@hotmail.com.ar">
-            <FaEnvelope /> ivocandido@hotmail.com.ar
+          <a href="mailto:distribuidoracandidos@gmail.com">
+            <FaEnvelope /> distribuidoracandidos@gmail.com
           </a>
         </div>
       </div>
