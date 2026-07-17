@@ -10,7 +10,6 @@ const CLIENTES = [
   "Madafaka",
   "Wilson Proveeduria",
   "Drugstore 365",
-  "Bar Schonfeldt",
   "Maxicels",
   "Despensa Violeta",
   "Maxikiosco el Gringo",
