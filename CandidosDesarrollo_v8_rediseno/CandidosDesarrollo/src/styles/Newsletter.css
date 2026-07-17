@@ -1,0 +1,114 @@
+.newsletter {
+  margin: 40px 24px;
+  background: var(--grafito, #1c1c1e);
+  border: 1px solid var(--borde-oscuro, #2e2e31);
+  border-radius: 18px;
+  padding: 26px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.newsletter-texto {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  flex: 1;
+  min-width: 240px;
+}
+
+.newsletter-icono {
+  font-size: 26px;
+  color: var(--amarillo, #f4b400);
+  flex-shrink: 0;
+}
+
+.newsletter-texto strong {
+  font-size: 1rem;
+}
+
+.newsletter-texto p {
+  margin: 4px 0 0;
+  color: #aaa;
+  font-size: 0.82rem;
+}
+
+.newsletter-acciones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-form input {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--borde-oscuro, #2e2e31);
+  background: var(--negro, #0a0a0a);
+  color: white;
+  font-size: 0.85rem;
+  min-width: 220px;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--amarillo, #f4b400);
+}
+
+.newsletter-form button {
+  background: var(--amarillo, #f4b400);
+  color: #111;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+  background: var(--amarillo-oscuro, #d49b00);
+}
+
+.newsletter-canal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--verde, #16a34a);
+  color: var(--verde, #16a34a);
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.newsletter-canal:hover {
+  background: var(--verde, #16a34a);
+  color: white;
+}
+
+.newsletter-mensaje {
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.newsletter-ok {
+  color: #4ade80;
+}
+
+.newsletter-error {
+  color: #f87171;
+}

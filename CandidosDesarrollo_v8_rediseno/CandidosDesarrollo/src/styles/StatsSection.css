@@ -1,0 +1,28 @@
+.stats {
+  margin: 40px 24px;
+  background: linear-gradient(135deg, var(--grafito, #1c1c1e), var(--negro, #0a0a0a));
+  border: 1px solid var(--borde-oscuro, #2e2e31);
+  border-radius: 18px;
+  padding: 34px 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stats-item strong {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--amarillo, #f4b400);
+}
+
+.stats-item span {
+  font-size: 0.78rem;
+  color: #bbb;
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
