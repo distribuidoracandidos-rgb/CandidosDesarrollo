@@ -9,6 +9,7 @@ const CLIENTES = [
   "Verduleria Laprida",
   "Madafaka",
   "Wilson Proveeduria",
+  "Bar Schofeldt",
   "Drugstore 365",
   "Maxicels",
   "Despensa Violeta",

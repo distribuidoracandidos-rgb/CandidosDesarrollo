@@ -10,6 +10,7 @@ const MARCAS = [
   "Panini",
   "Candela",
   "OCB",
+  "Payway",
   "Wolfram",
   "ReVirtual",
   "Golozen",
