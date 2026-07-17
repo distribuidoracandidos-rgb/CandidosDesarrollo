@@ -12,6 +12,11 @@ function Orders() {
 
   useEffect(() => {
     async function cargar() {
+      if (!supabase) {
+        setCargando(false);
+        return;
+      }
+
       const { data: dataPedidos } = await supabase
         .from("pedidos")
         .select("*")

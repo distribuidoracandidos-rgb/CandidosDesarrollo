@@ -17,23 +17,25 @@ function Cart() {
     // Si por algún motivo falla el guardado, igual dejamos que el pedido
     // se mande por WhatsApp para no perder la venta.
     try {
-      const { data: pedido, error } = await supabase
-        .from("pedidos")
-        .insert({ total })
-        .select()
-        .single();
+      if (supabase) {
+        const { data: pedido, error } = await supabase
+          .from("pedidos")
+          .insert({ total })
+          .select()
+          .single();
 
-      if (!error && pedido) {
-        const items = cart.map((p) => ({
-          pedido_id: pedido.id,
-          producto_id: String(p.ID),
-          producto_nombre: p.Producto,
-          tipo: p.tipo,
-          cantidad: p.cantidad,
-          precio_unitario: p.precio,
-        }));
+        if (!error && pedido) {
+          const items = cart.map((p) => ({
+            pedido_id: pedido.id,
+            producto_id: String(p.ID),
+            producto_nombre: p.Producto,
+            tipo: p.tipo,
+            cantidad: p.cantidad,
+            precio_unitario: p.precio,
+          }));
 
-        await supabase.from("pedido_items").insert(items);
+          await supabase.from("pedido_items").insert(items);
+        }
       }
     } catch (err) {
       console.error("No se pudo guardar el pedido en la base de datos:", err);

@@ -22,17 +22,19 @@ function Contact() {
     setEstado("enviando");
 
     // Guardamos la consulta en Supabase (tabla "consultas") para poder ver
-    // después qué productos consultan más los clientes.
-    const { error } = await supabase.from("consultas").insert({
-      nombre: form.nombre,
-      contacto: form.contacto,
-      producto_interes: form.producto,
-      mensaje: form.mensaje,
-    });
+    // después qué productos consultan más los clientes. Si Supabase no está
+    // configurado, igual dejamos que la consulta se mande por WhatsApp.
+    if (supabase) {
+      const { error } = await supabase.from("consultas").insert({
+        nombre: form.nombre,
+        contacto: form.contacto,
+        producto_interes: form.producto,
+        mensaje: form.mensaje,
+      });
 
-    if (error) {
-      setEstado("error");
-      return;
+      if (error) {
+        console.error("No se pudo guardar la consulta:", error);
+      }
     }
 
     setEstado("ok");

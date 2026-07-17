@@ -13,6 +13,11 @@ function Newsletter() {
 
     setEstado("enviando");
 
+    if (!supabase) {
+      setEstado("error");
+      return;
+    }
+
     const { error } = await supabase.from("suscriptores").insert({ email });
 
     if (error) {
