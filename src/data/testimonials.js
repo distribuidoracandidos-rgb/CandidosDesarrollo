@@ -4,19 +4,19 @@
 
 export const TESTIMONIOS = [
   {
-    nombre: "Madafaka",
+    nombre: "Kiosco El 20",
     texto:
-      "Trabajamos con Candido's hace más de 6 meses. Siempre cumplen con los tiempos de entrega; la seguridad y control es la base de su funcionamiento.",
+      "Trabajamos con Candido's hace más de 5 años. Siempre cumplen con los tiempos de entrega y los precios son los mejores de la zona.",
     estrellas: 5,
   },
   {
-    nombre: "Despensa Violeta",
+    nombre: "Autoservicio Don José",
     texto:
       "La atención por WhatsApp es rapidísima y el pedido siempre llega completo. Muy recomendable para cualquier comercio de Paraná.",
     estrellas: 5,
   },
   {
-    nombre: "Drugstore Terminal",
+    nombre: "Maxi Kiosco",
     texto:
       "Buena variedad de productos y stock siempre disponible. El envío gratis en Paraná es un montón de ayuda para nosotros.",
     estrellas: 4,
@@ -25,21 +25,15 @@ export const TESTIMONIOS = [
 
 export const NOVEDADES = [
   {
-    fecha: "Marzo 2025",
-    titulo: "Sumamos cobranzas por Payway",
-    texto:
-      "Ahora también podés consultarnos por carga virtual de tarjeta SUBE para tu comercio.",
-  },
-  {
     fecha: "Julio 2026",
     titulo: "Nueva página web de Candido's",
     texto:
       "Ya podés ver todo nuestro catálogo, armar tu pedido y contactarnos directo desde acá.",
   },
   {
-    fecha: "Abril 2026",
-    titulo: "Sumamos productos Panini",
+    fecha: "Julio 2026",
+    titulo: "Sumamos Carga Virtual SUBE",
     texto:
-      "Ahora también podés consultarnos por figuritas, albunes y accesorios del mundial para tu comercio.",
+      "Ahora también podés consultarnos por carga virtual de tarjeta SUBE para tu comercio.",
   },
 ];

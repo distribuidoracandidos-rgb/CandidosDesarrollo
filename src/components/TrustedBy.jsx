@@ -1,20 +1,18 @@
+import { FaStore } from "react-icons/fa6";
 import "../styles/TrustedBy.css";
 
 // Placeholder: reemplazar por los nombres y, si tenés, logos reales de tus
-// comercios adheridos. Podés agregar más strings a esta lista sin tocar
+// comercios adheridos. Podés agregar más objetos a esta lista sin tocar
 // el resto del componente.
 const CLIENTES = [
-  "Drugstore Terminal",
-  "Deu Srl",
-  "Madafaka",
-  "Maxikiosco el Gringo",
-  "Drugstore 365",
-  "Drugstore Guemes",
-  "Verduleria Laprida",
-  "YPF el Empalme",
-  "Despensa Violeta",
-  "La Guinda",
-  "Bar Schonfeldt",
+  { label: "Kiosco", nombre: "El 20" },
+  { label: "Autoservicio", nombre: "Don José" },
+  { label: "Maxi", nombre: "Kiosco" },
+  { label: "Almacén", nombre: "San Martín" },
+  { label: "Kiosco", nombre: "La Esquina" },
+  { label: "Distribuidora", nombre: "Del Centro" },
+  { label: "Despensa", nombre: "La Familia" },
+  { label: "Kiosco", nombre: "24 Horas" },
 ];
 
 function TrustedBy() {
@@ -28,8 +26,13 @@ function TrustedBy() {
       <div className="confian-carrusel">
         <div className="confian-track confian-track-derecha">
           {fila.map((cliente, i) => (
-            <div key={`der-${cliente}-${i}`} className="confian-card">
-              {cliente}
+            <div
+              key={`der-${cliente.nombre}-${i}`}
+              className={`confian-card ${i % 3 === 0 ? "confian-card-grande" : ""}`}
+            >
+              {i % 2 === 0 && <FaStore className="confian-icono" />}
+              <span className="confian-label">{cliente.label}</span>
+              <strong className="confian-nombre">{cliente.nombre}</strong>
             </div>
           ))}
         </div>
@@ -38,8 +41,13 @@ function TrustedBy() {
       <div className="confian-carrusel">
         <div className="confian-track confian-track-izquierda">
           {fila.map((cliente, i) => (
-            <div key={`izq-${cliente}-${i}`} className="confian-card">
-              {cliente}
+            <div
+              key={`izq-${cliente.nombre}-${i}`}
+              className={`confian-card ${i % 3 === 1 ? "confian-card-grande" : ""}`}
+            >
+              {i % 2 !== 0 && <FaStore className="confian-icono" />}
+              <span className="confian-label">{cliente.label}</span>
+              <strong className="confian-nombre">{cliente.nombre}</strong>
             </div>
           ))}
         </div>

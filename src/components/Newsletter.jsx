@@ -5,7 +5,7 @@ import "../styles/Newsletter.css";
 
 function Newsletter() {
   const [email, setEmail] = useState("");
-  const [estado, setEstado] = useState("idle"); // idle | enviando | ok | error
+  const [estado, setEstado] = useState("idle"); // idle | enviando | ok | error | sin-configurar
 
   async function suscribirse(e) {
     e.preventDefault();
@@ -14,13 +14,22 @@ function Newsletter() {
     setEstado("enviando");
 
     if (!supabase) {
-      setEstado("error");
+      // Esto pasa si faltan las variables VITE_SUPABASE_URL /
+      // VITE_SUPABASE_ANON_KEY en el hosting (Vercel), o si no se cargaron
+      // en el último deploy.
+      console.warn(
+        "Newsletter: Supabase no está configurado (faltan las variables de entorno)."
+      );
+      setEstado("sin-configurar");
       return;
     }
 
     const { error } = await supabase.from("suscriptores").insert({ email });
 
     if (error) {
+      // Esto suele pasar si la tabla "suscriptores" todavía no existe en
+      // Supabase (falta correr supabase_permisos.sql) o el RLS bloquea el insert.
+      console.error("Newsletter: error al guardar la suscripción:", error);
       setEstado("error");
     } else {
       setEstado("ok");
@@ -71,6 +80,13 @@ function Newsletter() {
       {estado === "error" && (
         <p className="newsletter-mensaje newsletter-error">
           No pudimos guardar tu mail, probá de nuevo en un rato.
+        </p>
+      )}
+
+      {estado === "sin-configurar" && (
+        <p className="newsletter-mensaje newsletter-error">
+          El newsletter todavía no está configurado del todo (falta conectar
+          la base de datos). Escribinos por WhatsApp mientras tanto.
         </p>
       )}
     </section>

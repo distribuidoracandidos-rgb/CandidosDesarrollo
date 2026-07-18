@@ -36,10 +36,10 @@ function Footer() {
             <a href="https://wa.me/5493434162242" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <FaWhatsapp />
             </a>
-            <a href="https://instagram.com/candidos.s" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://instagram.com/candidos.mayorista" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="https://facebook.com/CandidoRevirtual" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
             </a>
           </div>
@@ -57,8 +57,8 @@ function Footer() {
           <a href="https://wa.me/5493434162242">
             <FaWhatsapp /> +54 9 343 416-2242
           </a>
-          <a href="mailto:distribuidoracandidos@gmail.com">
-            <FaEnvelope /> distribuidoracandidos@gmail.com
+          <a href="mailto:contacto@candidosdistribuidora.com.ar">
+            <FaEnvelope /> contacto@candidosdistribuidora.com.ar
           </a>
           <span className="footer-ubicacion">
             <FaLocationDot /> Paraná, Entre Ríos, Argentina

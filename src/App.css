@@ -3,7 +3,16 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  padding-bottom: 90px; /* deja lugar para el navbar fijo abajo */
+}
+
+/* El navbar inferior (Inicio/Pedido) solo se muestra en mobile (ver
+   Navbar.css), así que este espacio reservado también debe ser solo
+   para mobile. En desktop no hay navbar abajo, y dejar el padding fijo
+   generaba un hueco en blanco después del footer. */
+@media (max-width: 900px) {
+  .app {
+    padding-bottom: 90px;
+  }
 }
 
 .toast {

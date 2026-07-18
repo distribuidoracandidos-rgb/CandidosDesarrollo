@@ -28,19 +28,53 @@
   color: white;
   border: 1px solid var(--borde-oscuro, #2e2e31);
   border-radius: 14px;
-  padding: 22px 30px;
-  font-family: "Plus Jakarta Sans", serif;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.4px;
+  padding: 20px 30px;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s, border-color 0.35s;
+}
+
+.confian-label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.confian-nombre {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.confian-icono {
+  font-size: 18px;
+  color: var(--amarillo, #f4b400);
+  opacity: 0.8;
+}
+
+.confian-card-grande {
+  padding: 26px 36px;
+}
+
+.confian-card-grande .confian-nombre {
+  font-size: 1.6rem;
 }
 
 .confian-card:hover {
   transform: scale(1.12);
   box-shadow: 0 14px 30px rgba(244, 180, 0, 0.18);
   border-color: var(--amarillo, #f4b400);
+}
+
+.confian-card:hover .confian-nombre {
   color: var(--amarillo, #f4b400);
 }
 

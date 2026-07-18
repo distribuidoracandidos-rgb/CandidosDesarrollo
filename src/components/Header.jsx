@@ -32,7 +32,6 @@ function Header() {
 
         <nav className="header-nav">
           <Link to="/">Inicio</Link>
-          <a href="/#categorias">Catálogo</a>
           <Link to="/nosotros">Nosotros</Link>
           <Link to="/opiniones">Opiniones</Link>
           <Link to="/contacto">Contacto</Link>

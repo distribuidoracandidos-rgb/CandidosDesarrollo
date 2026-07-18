@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://candidos-desarrollo.vercel.app/sitemap.xml

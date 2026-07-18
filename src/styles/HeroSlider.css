@@ -1,44 +1,53 @@
 .hero-slider {
   width: 100%;
-  min-height: 400px;
+  min-height: 460px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   padding: 70px 90px;
-  background: var(--negro, #0a0a0a);
+  background-color: #0a0a0a;
+  background-size: cover;
+  background-position: center;
   color: white;
   position: relative;
   overflow: hidden;
 }
 
-.hero-luces {
+.hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 480px 280px at 18% -10%, rgba(244, 180, 0, 0.06), transparent 60%),
-    radial-gradient(ellipse 480px 280px at 82% -10%, rgba(255, 255, 255, 0.05), transparent 60%),
-    radial-gradient(ellipse 700px 320px at 50% 115%, rgba(255, 255, 255, 0.03), transparent 70%),
-    linear-gradient(180deg, #161616 0%, #0a0a0a 55%, #050505 100%);
+    radial-gradient(ellipse 480px 280px at 18% -10%, rgba(244, 180, 0, 0.08), transparent 60%),
+    linear-gradient(100deg, rgba(5, 5, 5, 0.94) 0%, rgba(8, 8, 8, 0.85) 42%, rgba(10, 10, 10, 0.55) 68%, rgba(10, 10, 10, 0.35) 100%);
 }
 
 .hero-textura {
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: 0.5;
+  opacity: 0.22;
   mix-blend-mode: overlay;
   pointer-events: none;
 }
 
-.hero-texto {
-  max-width: 620px;
+.hero-contenido {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  justify-content: space-between;
+  gap: 40px;
   position: relative;
   z-index: 1;
+}
+
+.hero-texto {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 14px;
 }
 
 .hero-etiqueta {
@@ -51,7 +60,7 @@
 
 .hero-texto h1 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   line-height: 1.15;
   margin: 0;
 }
@@ -66,7 +75,6 @@
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: 10px;
 }
 
@@ -104,8 +112,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   width: 40px;
   height: 40px;
@@ -116,6 +124,7 @@
   cursor: pointer;
   z-index: 2;
   transition: 0.2s;
+  backdrop-filter: blur(4px);
 }
 
 .hero-flecha:hover {
@@ -147,7 +156,7 @@
   height: 8px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
   padding: 0;
   transition: 0.2s;
@@ -159,9 +168,20 @@
   border-radius: 5px;
 }
 
+@media (max-width: 900px) {
+  .hero-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 700px) {
   .hero-slider {
     padding: 60px 24px;
+  }
+
+  .hero-texto {
+    align-items: flex-start;
   }
 
   .hero-texto h1 {

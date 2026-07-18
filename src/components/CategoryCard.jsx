@@ -12,7 +12,7 @@ import {
 import { GiSmokingPipe } from "react-icons/gi";
 import { nombreVisible } from "../data/categoryDisplay";
 
-function CategoryCard({ nombre, slug }) {
+function CategoryCard({ nombre, slug, foto, cantidad }) {
   const iconos = {
     Cigarrillos: <FaSmoking />,
     Tabaco: <GiSmokingPipe />,
@@ -25,11 +25,31 @@ function CategoryCard({ nombre, slug }) {
 
   return (
     <Link to={`/categoria/${slug}`} className="categoria">
-      <div className="categoria-fondo" />
+      {foto ? (
+        <img
+          src={`/imagenes/productos/${foto}`}
+          alt=""
+          className="categoria-imagen"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div className="categoria-fondo" />
+      )}
+
+      <div className="categoria-overlay" />
+
       <div className="icono">{iconos[nombre] || <FaBox />}</div>
       <strong>{nombreVisible(nombre)}</strong>
+
+      {cantidad > 0 && (
+        <span className="categoria-cantidad">
+          {cantidad} {cantidad === 1 ? "producto" : "productos"}
+        </span>
+      )}
+
       <span className="categoria-ingresar">
-        Ingresar <FaArrowRight />
+        Ver categoría <FaArrowRight />
       </span>
     </Link>
   );

@@ -1,28 +1,14 @@
 import "../styles/BrandsCarousel.css";
 
 const MARCAS = [
-  "Sarandi",
-  "DirecTv",
-  "ReVirtual",
-  "Sube Nacion",
+  "Master",
+  "Mill",
+  "Pueblo",
   "Espert",
   "Fuegolandia",
-  "RapiPago",
   "Stanley",
-  "Golden",
-  "Personal",
-  "OCB",
   "Panini",
-  "Tabes S.A",
-  "Cobro Express",
-  "La Chyru",
-  "Golozen",
-  "Payway",
-  "Claro",
-  "Guaymallen",
-  "Candela",
-  "Brownway",
-  "Movistar",
+  "Dolchester",
 ];
 
 function BrandsCarousel() {

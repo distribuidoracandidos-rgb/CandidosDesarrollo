@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaWhatsapp } from "react-icons/fa6";
+import HeroChatMockup from "./HeroChatMockup";
+import heroDeposito from "../assets/hero/hero-deposito-hd.jpg";
 import "../styles/HeroSlider.css";
 
 const SLIDES = [
@@ -42,33 +44,40 @@ function HeroSlider() {
   const slide = SLIDES[activo];
 
   return (
-    <section className="hero-slider">
-      <div className="hero-luces" />
+    <section
+      className="hero-slider"
+      style={{ backgroundImage: `url(${heroDeposito})` }}
+    >
+      <div className="hero-overlay" />
       <div className="hero-textura" />
 
       <button className="hero-flecha hero-flecha-izq" onClick={anterior} aria-label="Anterior">
         <FaChevronLeft />
       </button>
 
-      <div className="hero-texto">
-        <span className="hero-etiqueta">{slide.etiqueta}</span>
-        <h1>{slide.titulo}</h1>
-        <p>{slide.texto}</p>
+      <div className="hero-contenido">
+        <div className="hero-texto">
+          <span className="hero-etiqueta">{slide.etiqueta}</span>
+          <h1>{slide.titulo}</h1>
+          <p>{slide.texto}</p>
 
-        <div className="hero-botones">
-          <a href="#categorias" className="hero-boton">
-            Ver catálogo
-          </a>
+          <div className="hero-botones">
+            <a href="#categorias" className="hero-boton">
+              Ver catálogo
+            </a>
 
-          <a
-            href="https://wa.me/5493434162242?text=Hola%20Candido's%2C%20quer%C3%ADa%20consultar..."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-boton hero-boton-secundario"
-          >
-            <FaWhatsapp /> Contactar asesor
-          </a>
+            <a
+              href="https://wa.me/5493434162242?text=Hola%20Candido's%2C%20quer%C3%ADa%20consultar..."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-boton hero-boton-secundario"
+            >
+              <FaWhatsapp /> Contactar asesor
+            </a>
+          </div>
         </div>
+
+        <HeroChatMockup />
       </div>
 
       <button className="hero-flecha hero-flecha-der" onClick={siguiente} aria-label="Siguiente">
