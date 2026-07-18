@@ -1,8 +1,16 @@
 import "../styles/Hero.css";
+import heroBg from "../assets/hero/galpon.webp";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+      }}
+    >
+      <div className="hero-overlay"></div>
+
       <div className="hero-luces" />
       <div className="hero-textura" />
 
