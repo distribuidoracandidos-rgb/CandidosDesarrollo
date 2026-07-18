@@ -14,7 +14,7 @@ const PREGUNTAS = [
   },
   {
     p: "¿Qué medios de pago aceptan?",
-    r: "Transferencia, efectivo y Mercado Pago.",
+    r: "Transferencia bancaria, efectivo y Mercado Pago.",
   },
   {
     p: "¿Puedo retirar por el local?",
