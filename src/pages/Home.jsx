@@ -4,6 +4,7 @@ import ProductCard from "../components/ProductCard";
 import ServiceCard from "../components/ServiceCard";
 import BrandsCarousel from "../components/BrandsCarousel";
 import TrustedBy from "../components/TrustedBy";
+import TestimonialsSection from "../components/TestimonialsSection";
 import StatsSection from "../components/StatsSection";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
@@ -63,6 +64,8 @@ function Home() {
       </div>
 
       <TrustedBy />
+
+      <TestimonialsSection />
 
       <StatsSection />
 

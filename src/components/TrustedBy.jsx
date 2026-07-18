@@ -1,32 +1,45 @@
 import "../styles/TrustedBy.css";
 
-// Placeholder: reemplazar por los nombres reales de tus comercios/clientes.
+// Placeholder: reemplazar por los nombres y, si tenés, logos reales de tus
+// comercios adheridos. Podés agregar más strings a esta lista sin tocar
+// el resto del componente.
 const CLIENTES = [
-  "Drugstore Terminal",
-  "Deu Srl",
-  "Maxikiosco la Esquina",
-  "Drugstore Guemes",
-  "Verduleria Laprida",
-  "Madafaka",
-  "Wilson Proveeduria",
-  "Bar Schofeldt",
-  "Drugstore 365",
-  "Maxicels",
-  "Despensa Violeta",
-  "Maxikiosco el Gringo",
+  "Kiosco El 20",
+  "Autoservicio Don José",
+  "Maxi Kiosco",
+  "Almacén San Martín",
+  "Kiosco La Esquina",
+  "Distribuidora Del Centro",
+  "Despensa La Familia",
+  "Kiosco 24 Horas",
 ];
 
 function TrustedBy() {
+  // Duplicamos la lista para lograr el efecto de scroll infinito continuo.
+  const fila = [...CLIENTES, ...CLIENTES];
+
   return (
     <section className="confian">
-      <h2 className="titulo-seccion">Confían en nosotros</h2>
+      <h2 className="titulo-seccion">Comercios que confían en nosotros</h2>
 
-      <div className="confian-grid">
-        {CLIENTES.map((cliente) => (
-          <div key={cliente} className="confian-item">
-            {cliente}
-          </div>
-        ))}
+      <div className="confian-carrusel">
+        <div className="confian-track confian-track-derecha">
+          {fila.map((cliente, i) => (
+            <div key={`der-${cliente}-${i}`} className="confian-card">
+              {cliente}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="confian-carrusel">
+        <div className="confian-track confian-track-izquierda">
+          {fila.map((cliente, i) => (
+            <div key={`izq-${cliente}-${i}`} className="confian-card">
+              {cliente}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

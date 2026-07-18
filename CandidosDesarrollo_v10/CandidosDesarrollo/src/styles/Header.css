@@ -1,0 +1,154 @@
+.header {
+  background: var(--negro, #0a0a0a);
+  color: white;
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 600;
+  border-bottom: 1px solid var(--borde-oscuro, #2e2e31);
+}
+
+.header-fila {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header-marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.header-marca h1 {
+  color: white;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.header-marca span {
+  display: block;
+  color: var(--amarillo, #f4b400);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.15s;
+}
+
+.header-nav a:hover {
+  color: var(--amarillo, #f4b400);
+}
+
+.header-acciones {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-buscador {
+  display: flex;
+  align-items: center;
+  background: var(--grafito, #1c1c1e);
+  border: 1px solid var(--borde-oscuro, #2e2e31);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-buscador input {
+  background: none;
+  border: none;
+  color: white;
+  padding: 9px 12px;
+  font-size: 0.85rem;
+  width: 200px;
+  font-family: inherit;
+}
+
+.header-buscador input:focus {
+  outline: none;
+}
+
+.header-buscador input::placeholder {
+  color: #777;
+}
+
+.header-buscador button {
+  background: none;
+  border: none;
+  color: #999;
+  padding: 0 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-buscador button:hover {
+  color: var(--amarillo, #f4b400);
+}
+
+.header-carrito {
+  position: relative;
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+.header-carrito-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: var(--amarillo, #f4b400);
+  color: #111;
+  font-size: 0.65rem;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+@media (max-width: 900px) {
+  .header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .header-buscador input {
+    width: 140px;
+  }
+}

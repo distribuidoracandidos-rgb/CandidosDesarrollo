@@ -1,0 +1,83 @@
+.confian {
+  margin-top: 8px;
+  padding: 10px 0;
+}
+
+.confian-carrusel {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  padding: 10px 0;
+}
+
+.confian-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.confian-track-derecha {
+  animation: desfilar-derecha 32s linear infinite;
+}
+
+.confian-track-izquierda {
+  animation: desfilar-izquierda 32s linear infinite;
+}
+
+.confian-card {
+  background: var(--negro, #0a0a0a);
+  color: white;
+  border: 1px solid var(--borde-oscuro, #2e2e31);
+  border-radius: 14px;
+  padding: 20px 30px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s, border-color 0.35s;
+}
+
+.confian-label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.confian-nombre {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.confian-card:hover {
+  transform: scale(1.12);
+  box-shadow: 0 14px 30px rgba(244, 180, 0, 0.18);
+  border-color: var(--amarillo, #f4b400);
+}
+
+.confian-card:hover .confian-nombre {
+  color: var(--amarillo, #f4b400);
+}
+
+@keyframes desfilar-derecha {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes desfilar-izquierda {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

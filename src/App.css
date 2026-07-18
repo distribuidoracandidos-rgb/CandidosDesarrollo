@@ -31,3 +31,12 @@
     transform: translate(-50%, 0);
   }
 }
+
+.pagina-cargando {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-weight: 600;
+}

@@ -1,0 +1,90 @@
+.hero-chat {
+  width: 280px;
+  flex-shrink: 0;
+  background: #0b141a;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  animation: flotar 4.5s ease-in-out infinite;
+}
+
+.hero-chat-header {
+  background: #005c4b;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+}
+
+.hero-chat-header strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.hero-chat-header span {
+  display: block;
+  font-size: 0.68rem;
+  color: #cde9df;
+}
+
+.hero-chat-cuerpo {
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #0b141a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+.hero-chat-burbuja {
+  max-width: 88%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.hero-chat-burbuja-cliente {
+  align-self: flex-start;
+  background: #1f2c34;
+  color: #eee;
+  border-top-left-radius: 2px;
+}
+
+.hero-chat-burbuja-nosotros {
+  align-self: flex-end;
+  background: #005c4b;
+  color: white;
+  border-top-right-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-chat-hora {
+  align-self: flex-end;
+  font-size: 0.62rem;
+  color: #c8e6df;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-chat {
+    width: 100%;
+    max-width: 320px;
+  }
+}
