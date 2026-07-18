@@ -4,14 +4,17 @@ import "../styles/TrustedBy.css";
 // comercios adheridos. Podés agregar más strings a esta lista sin tocar
 // el resto del componente.
 const CLIENTES = [
-  "Kiosco El 20",
-  "Autoservicio Don José",
-  "Maxi Kiosco",
-  "Almacén San Martín",
-  "Kiosco La Esquina",
-  "Distribuidora Del Centro",
-  "Despensa La Familia",
-  "Kiosco 24 Horas",
+  "Drugstore Terminal",
+  "Deu Srl",
+  "Madafaka",
+  "Maxikiosco el Gringo",
+  "Drugstore 365",
+  "Drugstore Guemes",
+  "Verduleria Laprida",
+  "YPF el Empalme",
+  "Despensa Violeta",
+  "La Guinda",
+  "Bar Schonfeldt",
 ];
 
 function TrustedBy() {
