@@ -3,6 +3,7 @@ import { FaLocationDot, FaUsers, FaStore, FaUserTie } from "react-icons/fa6";
 import entreRiosData from "../data/entreRiosRed.json";
 import { RANGOS_LEYENDA, colorPorClientes } from "../data/entreRiosColors";
 import "../styles/EntreRiosMap.css";
+import mapaEntreRios from "../assets/entre-rios.svg";
 
 const { localidades } = entreRiosData;
 
@@ -54,40 +55,11 @@ function EntreRiosMap() {
 
       <div className="red-comercial-mapa-wrap">
         <div className="red-comercial-mapa">
-          <svg
-            className="red-comercial-silueta"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            {/* Silueta esquemática inspirada en el contorno real de Entre
-                Ríos (angosta al norte entre los ríos Paraná y Uruguay,
-                ensanchándose hacia el sur) — no es un trazado geográfico
-                exacto de límites oficiales. */}
-            <path
-              d="M 40 3
-                 C 48 2, 56 4, 60 8
-                 L 66 16 L 72 22 L 78 30 L 83 40
-                 L 87 50 L 88 60 L 85 70
-                 L 79 79 L 71 87 L 62 93
-                 L 52 96 L 43 94
-                 L 36 88 L 30 80
-                 L 27 71 L 24 62
-                 L 19 56 L 15 48
-                 L 13 38 L 15 28
-                 L 20 19 L 27 12
-                 L 34 6 Z"
-              fill="url(#gradienteMapa)"
-              stroke="rgba(244, 180, 0, 0.4)"
-              strokeWidth="0.5"
-              strokeLinejoin="round"
-            />
-            <defs>
-              <linearGradient id="gradienteMapa" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#1c1c1e" />
-                <stop offset="100%" stopColor="#0a0a0a" />
-              </linearGradient>
-            </defs>
-          </svg>
+          <img
+  src={mapaEntreRios}
+  className="red-comercial-silueta"
+  alt="Mapa de Entre Ríos"
+/>
 
           {localidades.map((localidad, i) => (
             <button
