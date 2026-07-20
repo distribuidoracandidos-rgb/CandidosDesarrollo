@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 import Layout from "../components/Layout";
+import EntreRiosMap from "../components/EntreRiosMap";
 import "../styles/PaginaInstitucional.css";
 
 function About() {
@@ -26,6 +27,8 @@ function About() {
           </em>
         </p>
       </div>
+
+      <EntreRiosMap />
     </Layout>
   );
 }

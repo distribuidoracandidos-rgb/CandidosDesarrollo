@@ -1,0 +1,19 @@
+{
+  "localidades": [
+    { "id": "parana", "nombre": "Paraná", "clientes": 285, "comercios": 285, "vendedores": 4, "x": 26, "y": 34 },
+    { "id": "concordia", "nombre": "Concordia", "clientes": 110, "comercios": 98, "vendedores": 2, "x": 62, "y": 18 },
+    { "id": "gualeguaychu", "nombre": "Gualeguaychú", "clientes": 95, "comercios": 88, "vendedores": 2, "x": 68, "y": 82 },
+    { "id": "concepcion", "nombre": "Concepción del Uruguay", "clientes": 72, "comercios": 65, "vendedores": 1, "x": 72, "y": 62 },
+    { "id": "colon", "nombre": "Colón", "clientes": 58, "comercios": 52, "vendedores": 1, "x": 80, "y": 48 },
+    { "id": "villaguay", "nombre": "Villaguay", "clientes": 54, "comercios": 50, "vendedores": 1, "x": 54, "y": 32 },
+    { "id": "gualeguay", "nombre": "Gualeguay", "clientes": 46, "comercios": 42, "vendedores": 1, "x": 44, "y": 70 },
+    { "id": "nogoya", "nombre": "Nogoyá", "clientes": 41, "comercios": 37, "vendedores": 0, "x": 36, "y": 52 },
+    { "id": "crespo", "nombre": "Crespo", "clientes": 67, "comercios": 60, "vendedores": 1, "x": 30, "y": 42 },
+    { "id": "diamante", "nombre": "Diamante", "clientes": 38, "comercios": 34, "vendedores": 0, "x": 20, "y": 48 },
+    { "id": "lapaz", "nombre": "La Paz", "clientes": 39, "comercios": 35, "vendedores": 0, "x": 44, "y": 8 },
+    { "id": "federacion", "nombre": "Federación", "clientes": 22, "comercios": 19, "vendedores": 0, "x": 54, "y": 9 },
+    { "id": "chajari", "nombre": "Chajarí", "clientes": 18, "comercios": 15, "vendedores": 0, "x": 46, "y": 5 },
+    { "id": "sansalvador", "nombre": "San Salvador", "clientes": 15, "comercios": 12, "vendedores": 0, "x": 50, "y": 13 },
+    { "id": "victoria", "nombre": "Victoria", "clientes": 12, "comercios": 10, "vendedores": 0, "x": 23, "y": 64 }
+  ]
+}
