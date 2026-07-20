@@ -1,14 +1,26 @@
 import "../styles/BrandsCarousel.css";
 
 const MARCAS = [
-  "Master",
-  "Mill",
-  "Pueblo",
+  "Sarandí",
+  "Brownway",
+  "Golden",
   "Espert",
+  "Tabes S.A.",
+  "Candela",
+  "OCB",
+  "Chyru",
+  "Guaymallén",
+  "Golozen",
+  "Fernet Branca",
+  "Wolfram",
+  "SUBE",
+  "ReVirtual",
+  "Payway",
+  "Movistar",
+  "Claro",
+  "Personal",
+  "DirecTV",
   "Fuegolandia",
-  "Stanley",
-  "Panini",
-  "Dolchester",
 ];
 
 function BrandsCarousel() {
@@ -25,11 +37,11 @@ function BrandsCarousel() {
 
       <div className="marcas-carrusel">
         <div className="marcas-track">
-          {marcas.map((marca, i) => (
-            <span key={`${marca}-${i}`} className="marca-item">
-              {marca}
-            </span>
-          ))}
+        {marcas.map((marca, i) => (
+  <span key={`${marca}-${i}`} className="marca-item">
+    {marca}
+  </span>
+))}
         </div>
       </div>
     </section>

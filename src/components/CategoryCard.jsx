@@ -27,7 +27,7 @@ function CategoryCard({ nombre, slug, foto, cantidad }) {
     <Link to={`/categoria/${slug}`} className="categoria">
       {foto ? (
         <img
-          src={`/imagenes/productos/${foto}`}
+          src={`/imagenes/imagenes-categ/${foto}`}
           alt=""
           className="categoria-imagen"
           loading="lazy"

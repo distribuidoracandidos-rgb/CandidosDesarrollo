@@ -25,23 +25,33 @@ function Home() {
   }
 
   // Categorías únicas
-  const categorias = [...new Set(productos.map((p) => p.CATEGORIA))];
+const categorias = [...new Set(productos.map((p) => p.CATEGORIA))];
+
+console.log(categorias);
+
 
   // Para cada categoría, usamos la foto de un producto real de esa
   // categoría como fondo de la tarjeta (preferimos uno marcado como
   // destacado, si no hay, el primero que tenga foto cargada). Así queda
   // sincronizado solo con la base de datos, sin tener que elegir fotos
   // a mano ni tocar código cuando cambien los productos.
-  const fotoPorCategoria = {};
-  const cantidadPorCategoria = {};
-  categorias.forEach((categoria) => {
-    const deLaCategoria = productos.filter((p) => p.CATEGORIA === categoria);
-    const destacado = deLaCategoria.find((p) => p.DESTACADO === "SI" && p.FOTO);
-    const conFoto = destacado || deLaCategoria.find((p) => p.FOTO);
-    fotoPorCategoria[categoria] = conFoto?.FOTO;
-    cantidadPorCategoria[categoria] = deLaCategoria.length;
-  });
+  const fotoPorCategoria = {
+  Cigarrillos: "tabaco2.jpg",
+  Tabacos: "tabaco.jpg",
+  Bebida: "bebida.jpg",
+  Accesorios: "accesorio.jpg",
+  Bazar: "termo.png",      // Cambialo cuando tengas una imagen de bazar
+  Comestibles: "alf.jpg",
+  Snack: "snack.jpg",
+  SUBE: "sube.jpg",
+};
 
+const cantidadPorCategoria = {};
+categorias.forEach((categoria) => {
+  cantidadPorCategoria[categoria] = productos.filter(
+    (p) => p.CATEGORIA === categoria
+  ).length;
+});
   const destacados = productos.filter((p) => p.DESTACADO === "SI");
 
   return (
