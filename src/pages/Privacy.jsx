@@ -62,9 +62,7 @@ function Privacy() {
 
         <p className="pagina-institucional-nota">
           <em>
-            Este texto es un punto de partida general y no reemplaza el
-            asesoramiento de un profesional legal. Te recomendamos hacerlo
-            revisar antes de operar comercialmente a gran escala.
+            Ante cualquier consulta, reclamo o solicitud relacionada con nuestros servicios, el cliente podrá comunicarse con Candido’s a través de los medios oficiales disponibles en este sitio.
           </em>
         </p>
       </div>

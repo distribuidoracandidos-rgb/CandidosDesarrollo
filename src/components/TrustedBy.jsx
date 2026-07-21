@@ -5,13 +5,26 @@ import "../styles/TrustedBy.css";
 // comercios adheridos. Podés agregar más objetos a esta lista sin tocar
 // el resto del componente.
 const CLIENTES = [
-  { label: "Kiosco", nombre: "El 20" },
-  { label: "Autoservicio", nombre: "Don José" },
-  { label: "Maxi", nombre: "Kiosco" },
-  { label: "Almacén", nombre: "San Martín" },
+  { label: "Drugstore", nombre: "Terminal" },
+  { label: "Axion", nombre: "Cerrito" },
+  { label: "Autoservicio", nombre: "El Gringo" },
+  { label: "Maxi", nombre: "Al Sur" },
+  { label: "Almacén", nombre: "Violeta" },
+  { label: "", nombre: "Madafaka" },
+  { label: "Drugstore", nombre: "Gregorutti" },
+  { label: "YPF", nombre: "Don Sebastian" },
   { label: "Kiosco", nombre: "La Esquina" },
   { label: "Distribuidora", nombre: "Del Centro" },
+  { label: "Drugstore", nombre: "Fratello" },
+  { label: "", nombre: "Deu SRL" },
+  { label: "Autoservicio", nombre: "El Sauce" },
   { label: "Despensa", nombre: "La Familia" },
+  { label: "Bar", nombre: "Schonfeldt" },
+  { label: "Drugstore", nombre: "Almafuertes" },
+  { label: "Verduleria", nombre: "Laprida" },
+  { label: "Maxi", nombre: "Kiosco el 21" },
+  { label: "Granja y Polleria", nombre: "Los Tios" },
+  { label: "Shell", nombre: "Wagner" },
   { label: "Kiosco", nombre: "24 Horas" },
 ];
 
