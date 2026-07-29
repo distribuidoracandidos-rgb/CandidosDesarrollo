@@ -112,3 +112,31 @@
 .newsletter-error {
   color: #f87171;
 }
+@media (max-width: 560px) {
+  .newsletter {
+    padding: 22px 18px;
+  }
+
+  .newsletter-acciones {
+    width: 100%;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-form input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .newsletter-canal {
+    width: 100%;
+    justify-content: center;
+  }
+}

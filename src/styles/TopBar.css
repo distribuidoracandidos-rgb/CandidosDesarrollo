@@ -84,4 +84,14 @@
   .topbar-accesos-izq {
     order: 2;
   }
+
+  /* NUEVO — esto arregla el texto de envíos/horario que se salía */
+  .topbar-info {
+    padding: 0 6px;
+  }
+
+  .topbar-info span {
+    white-space: normal;
+    text-align: center;
+  }
 }
