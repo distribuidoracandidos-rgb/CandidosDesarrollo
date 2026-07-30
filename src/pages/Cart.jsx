@@ -18,9 +18,18 @@ function Cart() {
     // se mande por WhatsApp para no perder la venta.
     try {
       if (supabase) {
+        let origen = null;
+        try {
+          const guardado = sessionStorage.getItem("candidos_origen");
+          if (guardado) {
+            const utm = JSON.parse(guardado);
+            origen = [utm.utm_source, utm.utm_campaign].filter(Boolean).join(" / ");
+          }
+        } catch {}
+
         const { data: pedido, error } = await supabase
           .from("pedidos")
-          .insert({ total })
+          .insert({ total, origen })
           .select()
           .single();
 

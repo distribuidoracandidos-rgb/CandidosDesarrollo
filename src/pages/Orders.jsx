@@ -72,7 +72,11 @@ function Orders() {
                     <span className={`pedido-estado pedido-estado-${pedido.estado}`}>
                       {pedido.estado}
                     </span>
+                    {pedido.origen && (
+                      <span className="pedido-origen">📣 {pedido.origen}</span>
+                    )}
                   </div>
+                  
 
                   <div className="pedido-header-total">
                     <strong>${Number(pedido.total).toLocaleString("es-AR")}</strong>
