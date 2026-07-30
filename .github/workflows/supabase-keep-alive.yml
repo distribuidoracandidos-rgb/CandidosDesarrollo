@@ -12,7 +12,7 @@ jobs:
       - name: Consultar la base para mantenerla activa
         run: |
           curl --fail-with-body \
-            "${SUPABASE_URL}/rest/v1/suscriptores?select=id&limit=1" \
+            "${SUPABASE_URL}/rest/v1/consultas?select=id&limit=1" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
         env:
