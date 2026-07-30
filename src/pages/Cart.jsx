@@ -52,6 +52,10 @@ function Cart() {
     mensaje += `%0ATotal: $${total.toLocaleString("es-AR")}`;
     mensaje += "%0A%0AGracias.";
 
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead", { value: total, currency: "ARS" });
+    }
+
     window.open(`https://wa.me/5493434162242?text=${mensaje}`, "_blank");
 
     setEnviando(false);
