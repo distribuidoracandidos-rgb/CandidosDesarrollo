@@ -10,9 +10,9 @@ export const TESTIMONIOS = [
     estrellas: 5,
   },
   {
-    nombre: "Ferreteria San Francisco",
+    nombre: "Madafaka",
     texto:
-      "La atención por WhatsApp es rapidísima y el pedido siempre llega completo. Muy recomendable para cualquier comercio de Paraná.",
+      "Mi experiencia con este sistema es buenisima. No solo por el funcionamiento sino por la asesoria y rápida respuesta a mis multiples consultas. Súmamente recomendable.",
     estrellas: 5,
   },
   {
