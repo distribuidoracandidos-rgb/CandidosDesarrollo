@@ -17,6 +17,10 @@ function ProductCard({ producto }) {
       precio: producto.Precio_Caja,
     },
     {
+      nombre: "Pack",
+      precio: producto.Precio_Pack,
+    },
+    {
       nombre: "Blister",
       precio: producto.Precio_Blister,
     },
