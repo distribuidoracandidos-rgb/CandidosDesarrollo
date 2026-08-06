@@ -17,7 +17,7 @@ const SLIDES = [
   },
   {
     etiqueta: "Para tu comercio",
-    titulo: "Más de 2.000 productos en un solo lugar",
+    titulo: "Más de 500 productos en un solo lugar",
     texto: "Cigarrillos, bebidas, snacks, accesorios y bazar, todo en un mismo pedido.",
   },
 ];

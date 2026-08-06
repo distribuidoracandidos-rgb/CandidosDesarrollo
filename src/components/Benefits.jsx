@@ -14,7 +14,7 @@ const BENEFICIOS = [
   },
   {
     icono: <FaBox />,
-    titulo: "Más de 2.000 productos",
+    titulo: "Más de 500 productos",
     texto: "Variedad para tu negocio",
   },
   {
