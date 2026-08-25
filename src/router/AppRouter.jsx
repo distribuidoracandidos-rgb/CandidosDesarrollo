@@ -1,12 +1,10 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
+import ProtectedRoute from "./ProtectedRoute";
 
-// Home se carga siempre de entrada porque es la primera pantalla.
 import Home from "../pages/Home";
 
-// El resto de las páginas se cargan solo cuando el usuario navega a ellas
-// (lazy loading), así el primer ingreso al sitio baja mucho menos JS.
 const Category = lazy(() => import("../pages/Category"));
 const Product = lazy(() => import("../pages/Product"));
 const Cart = lazy(() => import("../pages/Cart"));
@@ -18,6 +16,7 @@ const Opinions = lazy(() => import("../pages/Opinions"));
 const Faq = lazy(() => import("../pages/Faq"));
 const Privacy = lazy(() => import("../pages/Privacy"));
 const Terms = lazy(() => import("../pages/Terms"));
+const AdminLogin = lazy(() => import("../pages/AdminLogin"));
 
 function CargandoPagina() {
   return <div className="pagina-cargando">Cargando...</div>;
@@ -33,7 +32,6 @@ function AppRouter() {
           <Route path="/categoria/:nombre" element={<Category />} />
           <Route path="/producto/:id" element={<Product />} />
           <Route path="/carrito" element={<Cart />} />
-          <Route path="/pedidos-recibidos" element={<Orders />} />
           <Route path="/buscar" element={<SearchResults />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
@@ -41,6 +39,17 @@ function AppRouter() {
           <Route path="/preguntas-frecuentes" element={<Faq />} />
           <Route path="/privacidad" element={<Privacy />} />
           <Route path="/terminos" element={<Terms />} />
+
+          <Route path="/admin/login" element={<AdminLogin />} />
+
+          <Route
+            path="/pedidos-recibidos"
+            element={
+              <ProtectedRoute>
+                <Orders />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Suspense>
     </BrowserRouter>
