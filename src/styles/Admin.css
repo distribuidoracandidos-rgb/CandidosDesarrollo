@@ -1,5 +1,10 @@
+/* ===== Reset local: evita que paddings desborden en mobile ===== */
+.admin-page * {
+  box-sizing: border-box;
+}
+
 .admin-page {
-  max-width: 640px;
+  max-width: 900px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
@@ -33,6 +38,7 @@
 }
 
 .admin-buscador {
+  width: 100%;
   padding: 11px 14px;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -55,6 +61,7 @@
 .admin-form-nuevo-cliente textarea,
 .admin-form-venta input,
 .admin-form-venta textarea {
+  width: 100%;
   padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -69,6 +76,7 @@
 
 .admin-form-venta-fila input {
   flex: 1;
+  min-width: 0;
 }
 
 .admin-form-venta-monto {
@@ -78,7 +86,7 @@
 }
 
 .admin-form-nuevo-cliente button,
-.admin-form-venta button {
+.admin-form-venta button[type="submit"] {
   padding: 11px;
   border: none;
   border-radius: 8px;
@@ -95,8 +103,8 @@
 
 /* ===== Lista de clientes ===== */
 .admin-clientes-lista {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 8px;
   padding: 16px;
 }
@@ -105,27 +113,40 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   padding: 14px 16px;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
+  min-width: 0;
+}
+
+.admin-cliente-card > div:first-child {
+  min-width: 0;
 }
 
 .admin-cliente-card strong {
   color: var(--candidos-negro, #1a1a1a);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .admin-cliente-card p {
   margin: 2px 0 0;
   font-size: 12.5px;
   color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .admin-cliente-total {
   flex-shrink: 0;
-  margin-left: 10px;
+  white-space: nowrap;
 }
 
 /* ===== Detalle de cliente ===== */
@@ -137,6 +158,7 @@
 
 .admin-cliente-info p {
   margin: 4px 0;
+  word-break: break-word;
 }
 
 .admin-cliente-notas {
@@ -152,11 +174,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .admin-cliente-total-box strong {
   font-size: 20px;
   color: var(--candidos-amarillo, #ffd100);
+  white-space: nowrap;
 }
 
 .admin-ventas-lista {
@@ -170,10 +194,16 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 10px;
   padding: 12px 14px;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 10px;
+}
+
+.admin-venta-item > div:first-child {
+  min-width: 0;
+  word-break: break-word;
 }
 
 .admin-venta-item strong {
@@ -190,6 +220,7 @@
   margin: 4px 0 0;
   font-size: 12.5px;
   color: #777;
+  word-break: break-word;
 }
 
 .admin-venta-derecha {
@@ -243,12 +274,15 @@
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
+  max-height: 260px;
+  overflow-y: auto;
 }
 
 .admin-producto-resultado-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   width: 100%;
   padding: 10px 12px;
   background: #fff;
@@ -257,6 +291,14 @@
   text-align: left;
   font-size: 13.5px;
   cursor: pointer;
+  min-width: 0;
+}
+
+.admin-producto-resultado-item span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 
 .admin-producto-resultado-item:last-child {
@@ -270,6 +312,7 @@
 .admin-producto-resultado-marca {
   font-size: 11.5px;
   color: #999;
+  flex-shrink: 0;
 }
 
 /* ===== Producto ya elegido ===== */
@@ -283,13 +326,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 10px 12px;
 }
 
+.admin-producto-seleccionado-info strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .admin-producto-seleccionado-info button {
+  flex-shrink: 0;
   background: none;
   border: none;
   color: var(--candidos-negro, #1a1a1a);
@@ -321,9 +373,80 @@
 }
 
 .admin-producto-seleccionado input {
+  width: 100%;
   padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 14px;
 }
 
+/* ============================================
+   DESKTOP / TABLET (a partir de 640px)
+   ============================================ */
+@media (min-width: 640px) {
+  .admin-page {
+    padding: 0 16px 40px;
+  }
+
+  .admin-boton-primario {
+    width: auto;
+    padding: 12px 28px;
+    margin: 18px 0 0;
+  }
+
+  .admin-clientes-acciones {
+    padding: 20px 0 0;
+    flex-direction: row;
+  }
+
+  .admin-buscador {
+    max-width: 340px;
+  }
+
+  .admin-form-nuevo-cliente,
+  .admin-form-venta {
+    margin: 14px 0 0;
+    padding: 20px;
+  }
+
+  .admin-form-nuevo-cliente {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .admin-form-nuevo-cliente input:first-child,
+  .admin-form-nuevo-cliente textarea,
+  .admin-form-nuevo-cliente button {
+    grid-column: 1 / -1;
+  }
+
+  .admin-clientes-lista {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0;
+  }
+
+  .admin-cliente-info,
+  .admin-cliente-total-box,
+  .admin-ventas-lista {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .admin-cliente-total-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .admin-ventas-lista {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .admin-clientes-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,7 +1,9 @@
 .admin-header {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 16px 18px;
   background: var(--candidos-negro, #1a1a1a);
   color: #fff;
@@ -14,11 +16,15 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .admin-header h1 {
   margin: 0;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .admin-volver {
@@ -43,3 +49,8 @@
   background: #333;
 }
 
+@media (min-width: 640px) {
+  .admin-header {
+    padding: 18px 24px;
+  }
+}
