@@ -192,6 +192,26 @@
   color: #777;
 }
 
+.admin-venta-derecha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.admin-venta-eliminar {
+  background: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.55;
+  padding: 2px;
+}
+
+.admin-venta-eliminar:hover {
+  opacity: 1;
+}
+
 /* ===== Toggle catálogo / manual ===== */
 .admin-form-toggle-manual {
   align-self: flex-start;
@@ -306,3 +326,4 @@
   border-radius: 8px;
   font-size: 14px;
 }
+

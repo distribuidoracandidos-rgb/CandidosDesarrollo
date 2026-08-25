@@ -159,6 +159,22 @@ function AdminClienteDetalle() {
     }
   }
 
+  async function handleEliminar(ventaId) {
+    const confirmado = window.confirm(
+      "¿Seguro que querés eliminar esta venta? No se puede deshacer."
+    );
+    if (!confirmado) return;
+
+    const { error } = await supabase
+      .from("ventas_clientes")
+      .delete()
+      .eq("id", ventaId);
+
+    if (!error) {
+      cargar();
+    }
+  }
+
   if (cargando) {
     return (
       <div className="admin-page">
@@ -360,7 +376,18 @@ function AdminClienteDetalle() {
                 </p>
                 {v.notas && <p className="admin-venta-notas">{v.notas}</p>}
               </div>
-              <strong>${Number(v.monto).toLocaleString("es-AR")}</strong>
+
+              <div className="admin-venta-derecha">
+                <strong>${Number(v.monto).toLocaleString("es-AR")}</strong>
+                <button
+                  type="button"
+                  className="admin-venta-eliminar"
+                  onClick={() => handleEliminar(v.id)}
+                  aria-label="Eliminar venta"
+                >
+                  🗑
+                </button>
+              </div>
             </div>
           ))}
         </div>
