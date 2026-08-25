@@ -17,6 +17,8 @@ const Faq = lazy(() => import("../pages/Faq"));
 const Privacy = lazy(() => import("../pages/Privacy"));
 const Terms = lazy(() => import("../pages/Terms"));
 const AdminLogin = lazy(() => import("../pages/AdminLogin"));
+const AdminClientes = lazy(() => import("../pages/AdminClientes"));
+const AdminClienteDetalle = lazy(() => import("../pages/AdminClienteDetalle"));
 
 function CargandoPagina() {
   return <div className="pagina-cargando">Cargando...</div>;
@@ -50,6 +52,24 @@ function AppRouter() {
               </ProtectedRoute>
             }
           />
+
+          <Route
+            path="/admin/clientes"
+            element={
+              <ProtectedRoute>
+                <AdminClientes />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin/clientes/:id"
+            element={
+              <ProtectedRoute>
+                <AdminClienteDetalle />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </Suspense>
     </BrowserRouter>
@@ -57,3 +77,4 @@ function AppRouter() {
 }
 
 export default AppRouter;
+

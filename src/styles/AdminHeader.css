@@ -1,0 +1,45 @@
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: var(--candidos-negro, #1a1a1a);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.admin-header-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.admin-volver {
+  color: var(--candidos-amarillo, #ffd100);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-logout {
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.admin-logout:hover {
+  background: #333;
+}
+

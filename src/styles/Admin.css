@@ -1,0 +1,194 @@
+.admin-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.admin-vacio {
+  text-align: center;
+  color: #777;
+  padding: 30px 16px;
+}
+
+.admin-boton-primario {
+  display: block;
+  width: calc(100% - 32px);
+  margin: 16px auto 0;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: var(--candidos-amarillo, #ffd100);
+  color: var(--candidos-negro, #1a1a1a);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ===== Buscador + acciones (lista de clientes) ===== */
+.admin-clientes-acciones {
+  padding: 16px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-buscador {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* ===== Formularios (nuevo cliente / nueva venta) ===== */
+.admin-form-nuevo-cliente,
+.admin-form-venta {
+  margin: 12px 16px 0;
+  padding: 16px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-form-nuevo-cliente input,
+.admin-form-nuevo-cliente textarea,
+.admin-form-venta input,
+.admin-form-venta textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.admin-form-venta-fila {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-form-venta-fila input {
+  flex: 1;
+}
+
+.admin-form-venta-monto {
+  margin: 0;
+  font-weight: 700;
+  color: var(--candidos-negro, #1a1a1a);
+}
+
+.admin-form-nuevo-cliente button,
+.admin-form-venta button {
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: var(--candidos-negro, #1a1a1a);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-form-nuevo-cliente button:disabled,
+.admin-form-venta button:disabled {
+  opacity: 0.6;
+}
+
+/* ===== Lista de clientes ===== */
+.admin-clientes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.admin-cliente-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-cliente-card strong {
+  color: var(--candidos-negro, #1a1a1a);
+}
+
+.admin-cliente-card p {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: #888;
+}
+
+.admin-cliente-total {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+/* ===== Detalle de cliente ===== */
+.admin-cliente-info {
+  padding: 16px 16px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.admin-cliente-info p {
+  margin: 4px 0;
+}
+
+.admin-cliente-notas {
+  color: #777;
+}
+
+.admin-cliente-total-box {
+  margin: 14px 16px 0;
+  padding: 16px;
+  background: var(--candidos-negro, #1a1a1a);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-cliente-total-box strong {
+  font-size: 20px;
+  color: var(--candidos-amarillo, #ffd100);
+}
+
+.admin-ventas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.admin-venta-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.admin-venta-item strong {
+  color: var(--candidos-negro, #1a1a1a);
+}
+
+.admin-venta-fecha {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.admin-venta-notas {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: #777;
+}
+
